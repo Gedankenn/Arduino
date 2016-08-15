@@ -17,22 +17,22 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  int duracao, distancia;
+  float duracao, distancia;
   digitalWrite(8,LOW);
   delayMicroseconds(2);
   digitalWrite(8,HIGH);
   delayMicroseconds(10);
   digitalWrite(8,LOW);
   duracao=pulseIn(13,HIGH);
-  distancia=(duracao/2)/29.1;
+  distancia=(duracao/2.0)/29.1;
    
   lcd.clear();
   lcd.setCursor(3,0);
   lcd.write("distancia");
-  delay(500);
+  //delay(500);
   lcd.setCursor(4,1);
   lcd.print(distancia);
-  delay(1000);
+  delay(200);
   
 
 }
